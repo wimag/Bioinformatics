@@ -2,7 +2,7 @@ __author__ = 'Mark'
 import xlrd
 import urllib2
 import xml.etree.ElementTree as ET
-
+import os.path
 def downloadProtFasta(seqID):
     i = 0
     successID = []
@@ -40,13 +40,35 @@ def downloadProtFasta(seqID):
                     localFile.close()
 
 
-
+            print "Protein FASTA downloaded" + i
         except:
             pass
-    print "Protein FASTAs downloaded"
+
     return successID
 
 if __name__ == "__main__":
+
+    if not os.path.exists(r'Nucleotides FASTAs/'):
+        os.makedirs(r'Nucleotides FASTAs/')
+
+    if not os.path.exists(r'Nucleotides short FASTAs/'):
+        os.makedirs(r'Nucleotides short FASTAs/')
+
+    if not os.path.exists(r'Protein FASTAs/'):
+        os.makedirs(r'Protein FASTAs/')
+
+    if not os.path.exists(r'Nucleitides FASTA ROIs/'):
+        os.makedirs(r'Nucleitides FASTA ROIs/')
+
+    if not os.path.exists(r'results/blastProtsLong/'):
+        os.makedirs(r'results/blastProtsLong/')
+
+    if not os.path.exists(r'results/blastProtsShort/'):
+        os.makedirs(r'results/blastProtsShort/')
+
+    if not os.path.exists(r'results/blastNucleoShort/'):
+        os.makedirs(r'results/blastNucleoShort/')
+
     rb = xlrd.open_workbook('trainingdata.xls',formatting_info=True)
     sheet = rb.sheet_by_index(0)
 
