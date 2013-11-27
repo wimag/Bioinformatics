@@ -4,7 +4,8 @@
 *.exe
 *.o
 *.so
-
+*.fasta
+*.txt
 
 *.7z
 *.dmg
@@ -15,11 +16,7 @@
 *.tar
 *.zip
 
-"Data Extraction"/"Nucleitides FASTA ROIs"/
-"Data Extraction"/"Nucleotides FASTAs"/
-"Data Extraction"/"Nucleotides short FASTAs"/
-"Data Extraction"/"Protein FASTAs"/
-"Data Extraction"/"results"/
+
 
 
 
