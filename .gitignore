@@ -1,0 +1,25 @@
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+"Data Extraction"/"Nucleitides FASTA ROIs"/
+"Data Extraction"/"Nucleotides FASTAs"/
+"Data Extraction"/"Nucleotides short FASTAs"/
+"Data Extraction"/"Protein FASTAs"/
+"Data Extraction"/"results"/
+
+
+
