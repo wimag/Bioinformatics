@@ -9,9 +9,7 @@ import re
 import subprocess
 
 def genNucleotideRoi(sequences):
-    num = 0
-    for (seq,name) in sequences:
-        num += 1
+    for (seq,name,num) in sequences:
         try:
             if stat("Protein FASTAs/"+name+".fasta")[6]==0:
                 continue
@@ -86,8 +84,8 @@ if __name__ == "__main__":
     seqID = []
     for rownum in range(1,sheet.nrows):
         row = sheet.row_values(rownum)
-        sequences.append((row[1],row[0]))
+        sequences.append((row[1],row[0],row[3]))
         seqID.append(row[0])
     print(sequences)
-    #genNucleotideRoi(sequences)
+    genNucleotideRoi(sequences)
     runLocalNucleoBlast()

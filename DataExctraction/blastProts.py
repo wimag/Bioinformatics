@@ -41,10 +41,10 @@ if __name__ == "__main__":
 
     sequences = []
     seqID = []
-    for rownum in range(1,10):#sheet.nrows):
+    for rownum in range(1,sheet.nrows):
         row = sheet.row_values(rownum)
         sequences.append((row[1],row[0]))
         seqID.append(row[0])
     print(sequences)
-    #blastShortSeqs(sequences)
+    blastShortSeqs(sequences)
     blastSeqs()
